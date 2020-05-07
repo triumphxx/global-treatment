@@ -1,6 +1,5 @@
 package org.triumphxx.globaltreatment.exception;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestControllerAdvice;
@@ -20,11 +19,11 @@ public class GlobalExceptionHandler {
     @ResponseBody
     public Result presses(Exception exception){
         if (exception instanceof NullPointerException){
-            return Result.error(404,"发生了空指针异常");
+            return Result.error("发生了空指针异常");
         }
         else if (exception instanceof ArithmeticException){
-            return Result.error(404,"发生了算术异常");
+            return Result.error("发生了算术异常");
         }
-        return Result.error(500,"发生了未知的异常");
+        return Result.error("发生了未知的异常");
     }
 }

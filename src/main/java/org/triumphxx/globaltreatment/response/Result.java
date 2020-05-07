@@ -22,9 +22,6 @@ public class Result {
         return new Result(500, msg);
     }
 
-    public static Result error(String msg, Object obj) {
-        return new Result(500, msg);
-    }
 
     public static Result error(Integer code,String msg){
         return new Result(code, msg);
@@ -35,11 +32,11 @@ public class Result {
         this.msg = msg;
     }
 
-    public Integer getStatus() {
+    public Integer getCode() {
         return code;
     }
 
-    public Result setStatus(Integer code) {
+    public Result setCode(Integer code) {
         this.code = code;
         return this;
     }
