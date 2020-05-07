@@ -17,7 +17,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     @ResponseBody
-    public Result presses(Exception exception){
+    public Result proceed(Exception exception){
         if (exception instanceof NullPointerException){
             return Result.error("发生了空指针异常");
         }

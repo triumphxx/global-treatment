@@ -1,2 +1,3 @@
 # global-treatment
 springboot全局异常处理demo
+springboot全局数据绑定demo
